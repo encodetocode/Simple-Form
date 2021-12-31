@@ -26,7 +26,7 @@ Route::get('/posts/edit/{post}', [PostController::class, 'index'])->name('editfo
 
 Route::get('/posts/editpost/{post}', [PostController::class, 'edit'])->name('editform');
 
-//this is while using Eloquent Model as parameter in show() rather that $id variable
+//this is while using Eloquent Model as parameter in show() rather that $id variable to customize the key
 Route::get('/posts/post/{post:id}', [PostController::class,'show'])->name('showpost');
 
 Route::get('/posts/{post:id}', [PostController::class,'destroyed'])->name('deletepost');
